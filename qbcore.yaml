@@ -460,6 +460,11 @@ tasks:
     overwrite: true
 
 
+  - action: move_path
+    src: ./tmp/qbcore/dpemotes/config.lua
+    dest: ./resources/[standalone]/dpemotes/config.lua
+    overwrite: true
+
   # Clean up
   - action: remove_path
     path: ./tmp
