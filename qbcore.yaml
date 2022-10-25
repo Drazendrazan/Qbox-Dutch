@@ -1,10 +1,10 @@
 $engine: 3
 $onesync: on
-name: Qbox Project
+name: Qbox Project NL
 version: 1.0.0
 author: The Community
-description: A FiveM core with a load of bloat.
-
+description: A FiveM core with a load of bloat but now in dutch.
+# ./resources/[qb]/qb-core
 tasks:
   #  Download Base Files
   - action: download_github
@@ -437,6 +437,28 @@ tasks:
   - action: unzip
     dest: ./resources/[ox]
     src: ./tmp/ox_doorlock.zip
+
+
+  - action: move_path
+    src: ./tmp/qbcore/shared/gangs.lua
+    dest: ./resources/[qb]/qb-core/shared/gangs.lua
+    overwrite: true
+    
+  - action: move_path
+    src: ./tmp/qbcore/shared/items.lua
+    dest: ./resources/[qb]/qb-core/shared/items.lua
+    overwrite: true
+
+  - action: move_path
+    src: ./tmp/qbcore/shared/jobs.lua
+    dest: ./resources/[qb]/qb-core/shared/jobs.lua
+    overwrite: true
+
+  - action: move_path
+    src: ./tmp/qbcore/shared/weapons.lua
+    dest: ./resources/[qb]/qb-core/shared/weapons.lua
+    overwrite: true
+
 
   # Clean up
   - action: remove_path
